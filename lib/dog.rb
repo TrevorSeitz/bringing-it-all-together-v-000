@@ -72,8 +72,8 @@ class Dog
     name = dog[:name]
     breed = dog[:breed]
     new_dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
-    binding.pry
-    
+    # binding.pry
+
     if !new_dog.empty?
       dog_data = new_dog[0]
       dog_details = [[:id, dog_data[0]], [:name, dog_data[1]], [:breed, dog_data[2]]].to_h
