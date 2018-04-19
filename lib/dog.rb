@@ -5,8 +5,8 @@ class Dog
   def initialize(id=nil, dog)
     binding.pry
     @id = id
-    @name = dog.name
-    @breed = dog.breed
+    @name = dog[:name]
+    @breed = dog[:breed]
   end
 
   def self.create_table
