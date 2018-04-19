@@ -76,8 +76,8 @@ class Dog
 
     if !new_dog.empty?
       dog_data = new_dog[0]
-      dog_details = [[:id, dog_data[0]], [:name, dog_data[1]], [:breed, dog_data[2]]].to_h
-      dog = Dog.new(dog_details)
+      dog_details = [[:name, dog_data[1]], [:breed, dog_data[2]]].to_h
+      dog = Dog.new(gog_data[0], dog_details)
     end
   end
 
