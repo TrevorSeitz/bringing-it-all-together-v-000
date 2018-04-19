@@ -75,7 +75,7 @@ class Dog
     binding.pry
     if !new_dog.empty?
       dog_data = dog[0]
-      dog_details = [[:name, row[1]], [:breed, row[2]]].to_h
+      dog_details = [[id:, dog_data[0]][:name, dog_data[1]], [:breed, dog_data[2]]].to_h
       dog = Dog.new
     end
   end
