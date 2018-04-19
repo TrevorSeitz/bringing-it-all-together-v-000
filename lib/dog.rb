@@ -71,9 +71,7 @@ class Dog
     # dog_details = [[:name, row[0]], [:breed, row[1]]].to_h
     name = dog[:name]
     breed = dog[:breed]
-    binding.pry
     new_dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
-    binding.pry
     if !new_dog.empty?
       dog_data = dog[0]
       dog_details = [[:name, row[1]], [:breed, row[2]]].to_h
