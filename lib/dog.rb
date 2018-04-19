@@ -2,9 +2,9 @@ class Dog
 
   attr_accessor :id, :name, :breed
 
-  def initialize(dog)
+  def initialize(id=nil, dog)
     binding.pry
-    @id = dog.id
+    @id = id
     @name = dog.name
     @breed = dog.breed
   end
