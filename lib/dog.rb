@@ -61,4 +61,7 @@ class Dog
     end.first
   end
 
+  def self.new_from_db(row)
+    new_dog = self.new({id => row[0n, ame => row[1], breed => row[2]})
+
 end
