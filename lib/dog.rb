@@ -3,7 +3,6 @@ class Dog
   attr_accessor :id, :name, :breed
 
   def initialize(id=nil, dog)
-    # binding.pry
     @id = id
     @name = dog[:name]
     @breed = dog[:breed]
@@ -17,6 +16,14 @@ class Dog
       breed TEXT
     )
     SQL
+  end
+
+  def self.drop_table
+    sql = <<-SQL
+      DROP TABLE IF EXISTS dogs
+    SQL
+
+    DB[:conn].execute(sql)
   end
 
 end
