@@ -74,7 +74,8 @@ class Dog
       dog_data = dog[0]
       dog_details = [[:name, row[1]], [:breed, row[2]]].to_h
       dog = Dog.new
-    endend
-
+    end
   end
+
+  
 end
