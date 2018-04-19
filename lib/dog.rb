@@ -62,7 +62,7 @@ class Dog
   end
 
   def self.new_from_db(row)
-    new_dog = [[:name, :breed], [row]].to_h
+    new_dog = [[:name, :breed], [row[0], row[1]]].to_h
 binding.pry
     # new_dog = self.new({:id => row[0], :name => row[1], :breed => row[2]})
     new_dog
