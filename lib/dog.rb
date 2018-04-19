@@ -70,8 +70,8 @@ class Dog
   def self.find_or_create_by(dog)
     # dog_details = [[:name, row[0]], [:breed, row[1]]].to_h
     binding.pry
-    dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
-    if !dog.empty?
+    new_dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
+    if !new_dog.empty?
       dog_data = dog[0]
       dog_details = [[:name, row[1]], [:breed, row[2]]].to_h
       dog = Dog.new
