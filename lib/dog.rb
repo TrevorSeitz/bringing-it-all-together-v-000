@@ -2,11 +2,11 @@ class Dog
 
   attr_accessor :id, :name, :breed
 
-  def initialize(id)
-    binding.pry
-    @id = id
-    @name = name
-    @breed = breed
+  def initialize(dog)
+    # binding.pry
+    @id = dog.id
+    @name = dog.name
+    @breed = dog.breed
   end
 
   def self.create_table
